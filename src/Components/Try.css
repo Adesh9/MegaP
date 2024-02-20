@@ -1,0 +1,6 @@
+.dropdown-content {
+    display: list-item;
+    flex-direction: column;
+    position: absolute;
+    list-style-position: flex;
+}
