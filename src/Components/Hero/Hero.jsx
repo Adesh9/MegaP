@@ -5,9 +5,15 @@ import './Hero.css';
 import Logo from './Final.mp4';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from '../LanguageSelector';
+import NewLogin from '../Signup/Signup';
+import { NavLink } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 function Hero() {
   const {t} = useTranslation();
+  const navigate = useNavigate();
+
 
   return (
     <div className='hero-container'>
@@ -15,13 +21,18 @@ function Hero() {
       <h1>{t("hero1")}</h1>
       <p>{t("par1")}</p>
       <div className='hero-btns'>
+        
         <Button
           className='btns'
           buttonStyle='btn--outline'
           buttonSize='btn--large'
+          onClick={() => navigate('/Signup')}
+
         >
+          
           {t("b1")}
         </Button>
+
         <Button
           className='btns'
           buttonStyle='btn--primary'

@@ -4,23 +4,32 @@ import { NavLink } from 'react-router-dom';
 import LanguageSelector from '../LanguageSelector';
 import './Navbar.css';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+import { firebaseAuth, useFirebase } from '../../Context/firebase';
+import { signOut } from 'firebase/auth';
+import Nav from 'react-bootstrap/Nav';
+import Try from '../Try';
+import Combined from '../Combined/Combined';
 
 
+function Mainnav(){
 
-
-
-
-
-function Navbar() {
-
-  // const {i18n} = useTranslation();
+      // const {i18n} = useTranslation();
 
   // const changeLanguage = (lng) =>{
   //   i18n.changeLanguage(lng);
   // };
+  const firebase = useFirebase();
+  const navigate = useNavigate();
 
+  
 
-
+  const handleLogOut = () =>{
+    signOut(firebaseAuth).then(() => {
+     navigate("/");
+     console.log("Signed Out")
+    });
+ };
 
 const {t} = useTranslation();
 
@@ -55,6 +64,22 @@ const toggleDropdown = () => {
 
   window.addEventListener('resize', showButton);
 
+  const [activeTab, setActiveTab] = useState('Home');
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
+
+  const renderTabContent = () => {
+    switch (activeTab) {
+      case 'readings':
+        return <Try />;
+      case 'visualize':
+        return <Combined />;
+      default:
+        return <Try/>;
+    }
+  };
 
   // const langauges =[
   //   {code:"en",lng:"English"},
@@ -67,7 +92,7 @@ const toggleDropdown = () => {
       <nav className='navbar'>
       
         <div className='navbar-container'>
-          <NavLink to='/' className='navbar-logo' onClick={closeMobileMenu}>
+          <NavLink to='/Main' className='navbar-logo' onClick={closeMobileMenu}>
             {/* D-Farm */}
             {t("logoname")}
             <i class='fab fa-typo3' />
@@ -78,21 +103,17 @@ const toggleDropdown = () => {
           </div>
 
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-              <NavLink to='/' className='nav-links' onClick={closeMobileMenu}>
+              <li className={`nav-links ${activeTab === 'readings' ? 'active' : ''}`}
+              onClick={() => handleTabClick('readings')}>
                 {/* Home */}
-                {t("head1")}
-              </NavLink>
+                {t("head5")}
             </li>
-            <li className='nav-item'>
-              <NavLink
-                
-                className='nav-links'
-               
-              >
-                {/* Reading's */}
-                {/*t("head2")*/}
-              </NavLink>
+            <li className={`nav-links ${activeTab === 'visualize' ? 'active' : ''}`}
+              onClick={() => handleTabClick('visualize')}>
+              
+                {/* Readings */}
+                {t("head6")}
+             
             </li>
             {/* <li className='nav-item'>
               <NavLink
@@ -112,20 +133,23 @@ const toggleDropdown = () => {
               <NavLink
                 to='/Login'
                 className='nav-links-mobile'
-                onClick={closeMobileMenu}
+                onClick={handleLogOut}
               >
-                {t("head3")}
+                {t("head4")}
               </NavLink>
             </li>
           </ul>
-           <Button className="sure" ><NavLink className="sure"to='/Login'>{t("head3")}</NavLink></Button>
+           <Button className="sure" onClick={handleLogOut} ><NavLink className="sure"to='/Login'>{t("head4")}</NavLink></Button>
          
         </div>
        
       </nav>
+      <div>
+        {renderTabContent()}
+      </div>
     </>
   );
+
 }
 
-export default Navbar;
-
+export default Mainnav;

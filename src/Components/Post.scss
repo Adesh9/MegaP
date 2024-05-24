@@ -1,0 +1,339 @@
+.card-layout {
+    background-color: lavender;
+    .header {
+        height: 60px;
+        width: 100%;
+        padding-top: 40px;
+        // background-color: rgb(240, 242, 242);
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 800;
+            font-size: 40px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    }
+    .card-1 {
+        margin-left: 190px;
+        margin-top: 50px;
+        height: 300px;
+        width: 500px;
+        border-radius: 10px;
+        border: 3px solid rgb(17, 17, 17);
+        background-color: lavender;
+        box-shadow: 1px 3px 5px rgb(32, 26, 26);
+        gap: 20px;
+        .i1 {
+            display: flex;
+            img {
+                display: flex;
+                align-items: center;
+                height: 200px;
+                width: 220px;
+                margin-top: 50px;
+                margin-left: 20px;
+                border-radius: 15px;
+                box-shadow: 1px 3px 5px gray;
+                border: 3px solid rgb(17, 17, 17);
+                box-shadow: 2px 2px 2px rgb(17, 17, 17);
+                transition: all ease 0.2s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            width: 200px;
+            box-shadow: 1px 3px 5px gray;
+            margin-left: 280px;
+            margin-top: -200px;
+            font-weight: 600;
+            font-size: 25px;
+            font-style: italic;
+            border-radius: 10px;
+            color: azure;
+            border: 3px solid rgb(17, 17, 17);
+            background-color: rgb(17, 17, 17);
+            white-space: nowrap;
+        }
+        .r1 {
+            border-radius: 10px;
+            border: 3px solid rgb(17, 17, 17);
+            box-shadow: 1px 3px 5px rgb(17, 17, 17);
+            height: 50px;
+            width: 110px;
+            background-color: lavender;
+            margin-left: 325px;
+            margin-top: 60px;
+            font-weight: 700;
+            font-size: 22px;
+            padding-left: 14px;
+            padding-right: -20px;
+            padding-top: 9px;
+        }
+    }
+    .card-2 {
+        margin-left: 960px;
+        margin-top: -300px;
+        height: 300px;
+        width: 500px;
+        border-radius: 10px;
+        background-color: lavender;
+        border: 3px solid rgb(17, 17, 17);
+        box-shadow: 1px 3px 5px gray;
+        .i1 {
+            display: flex;
+            img {
+                display: flex;
+                align-items: center;
+                height: 200px;
+                width: 220px;
+                margin-top: 50px;
+                margin-left: 20px;
+                border-radius: 15px;
+                box-shadow: 1px 3px 5px gray;
+                border: 3px solid rgb(17, 17, 17);
+                box-shadow: 2px 2px 2px rgb(17, 17, 17);
+                transition: all ease 0.2s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .h2 {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            height: 80px;
+            width: 200px;
+            box-shadow: 1px 3px 5px gray;
+            margin-left: 280px;
+            margin-top: -200px;
+            font-weight: 600;
+            font-size: 25px;
+            font-style: italic;
+            border-radius: 10px;
+            background-color: rgb(31, 29, 29);
+            color: azure;
+        }
+        .r2 {
+            border-radius: 10px;
+            box-shadow: 1px 3px 5px gray;
+            height: 50px;
+            width: 80px;
+            background-color: lavender;
+            margin-left: 325px;
+            margin-top: 60px;
+            font-weight: 700;
+            font-size: 30px;
+            padding-left: 17px;
+            padding-right: -20px;
+            padding-top: 3px;
+            border: 3px solid rgb(17, 17, 17);
+            box-shadow: 1px 3px 5px rgb(17, 17, 17);
+        }
+    }
+    .card-3 {
+        margin-left: 190px;
+        margin-top: 90px;
+        height: 300px;
+        width: 500px;
+        border-radius: 10px;
+        background-color: lavender;
+        box-shadow: 1px 3px 5px gray;
+        border: 3px solid rgb(17, 17, 17);
+        box-shadow: 1px 3px 5px rgb(17, 17, 17);
+        gap: 20px;
+        .i1 {
+            display: flex;
+            img {
+                display: flex;
+                align-items: center;
+                height: 200px;
+                width: 220px;
+                margin-top: 50px;
+                margin-left: 20px;
+                border-radius: 15px;
+                box-shadow: 1px 3px 5px gray;
+                border: 3px solid rgb(17, 17, 17);
+                box-shadow: 2px 2px 2px rgb(17, 17, 17);
+                transition: all ease 0.2s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .h3 {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            height: 80px;
+            width: 200px;
+            box-shadow: 1px 3px 5px gray;
+            margin-left: 280px;
+            margin-top: -200px;
+            font-weight: 600;
+            font-size: 25px;
+            font-style: italic;
+            border-radius: 10px;
+            background-color: rgb(17, 17, 17);
+            color: azure;
+        }
+        .r3 {
+            border-radius: 10px;
+            box-shadow: 1px 3px 5px gray;
+            height: 50px;
+            width: 80px;
+            background-color: lavender;
+            margin-left: 325px;
+            margin-top: 60px;
+            font-weight: 700;
+            font-size: 30px;
+            padding-left: 17px;
+            padding-right: -20px;
+            padding-top: 3px;
+            border: 3px solid rgb(17, 17, 17);
+            box-shadow: 1px 3px 5px rgb(17, 17, 17);
+        }
+    }
+    .card-4 {
+        margin-left: 960px;
+        margin-top: -300px;
+        height: 300px;
+        width: 500px;
+        border-radius: 10px;
+        background-color: lavender;
+        box-shadow: 1px 3px 5px gray;
+        border: 3px solid rgb(17, 17, 17);
+        box-shadow: 1px 3px 5px rgb(17, 17, 17);
+        gap: 20px;
+        .i1 {
+            display: flex;
+            img {
+                display: flex;
+                align-items: center;
+                height: 200px;
+                width: 220px;
+                margin-top: 50px;
+                margin-left: 20px;
+                border-radius: 15px;
+                box-shadow: 1px 3px 5px gray;
+                transition: all ease 0.2s;
+                border: 3px solid rgb(17, 17, 17);
+                box-shadow: 2px 2px 2px rgb(17, 17, 17);
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .h4 {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            height: 80px;
+            width: 200px;
+            box-shadow: 1px 3px 5px gray;
+            margin-left: 280px;
+            margin-top: -200px;
+            font-weight: 600;
+            font-size: 25px;
+            font-style: italic;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 25px;
+            font-style: italic;
+            border-radius: 10px;
+            background-color: rgb(17, 17, 17);
+            color: azure;
+        }
+        .r4 {
+            border-radius: 10px;
+            box-shadow: 1px 3px 5px gray;
+            height: 50px;
+            width: 80px;
+            background-color: lavender;
+            margin-left: 325px;
+            margin-top: 60px;
+            font-weight: 700;
+            font-size: 30px;
+            padding-left: 17px;
+            padding-right: -20px;
+            padding-top: 3px;
+            border: 3px solid rgb(17, 17, 17);
+            box-shadow: 1px 3px 5px rgb(17, 17, 17);
+        }
+    }
+    .card-5 {
+        // margin: 0 auto;
+        margin-left: 590px;
+        margin-top: 80px;
+        height: 300px;
+        width: 510px;
+        border-radius: 10px;
+        background-color: lavender;
+        box-shadow: 1px 3px 5px gray;
+        border: 3px solid rgb(17, 17, 17);
+        box-shadow: 1px 3px 5px rgb(17, 17, 17);
+        gap: 20px;
+        .i1 {
+            display: flex;
+            img {
+                display: flex;
+                align-items: center;
+                height: 200px;
+                width: 220px;
+                margin-top: 50px;
+                margin-left: 20px;
+                border-radius: 15px;
+                box-shadow: 1px 3px 5px gray;
+                transition: all ease 0.2s;
+                border: 3px solid rgb(17, 17, 17);
+                box-shadow: 2px 2px 2px rgb(17, 17, 17);
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .h5 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            width: 220px;
+            box-shadow: 1px 3px 5px gray;
+            margin-left: 270px;
+            margin-top: -200px;
+            font-weight: 600;
+            font-size: 25px;
+            font-style: italic;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 25px;
+            font-style: italic;
+            border-radius: 10px;
+            background-color: rgb(17, 17, 17);
+            color: azure;
+        }
+        .r5 {
+            border-radius: 10px;
+            box-shadow: 1px 3px 5px gray;
+            height: 50px;
+            width: 80px;
+            background-color: lavender;
+            margin-left: 325px;
+            margin-top: 60px;
+            font-weight: 700;
+            font-size: 30px;
+            padding-left: 17px;
+            padding-right: -20px;
+            padding-top: 3px;
+            border: 3px solid rgb(17, 17, 17);
+            box-shadow: 1px 3px 5px rgb(17, 17, 17);
+        }
+    }
+}

@@ -1,8 +1,15 @@
+.th {
+    height: 1300px;
+    background-color: lavender;
+}
+
 .loginsignup {
     width: 100%;
     height: 99vh;
-    background: #fce3fe;
+    /* background: #fce3fe; */
+    background: lavender;
     padding-top: 100px;
+    margin-bottom: 50px;
 }
 
 .loginsignup-container {
